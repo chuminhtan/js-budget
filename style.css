@@ -1,0 +1,163 @@
+/* VARIABLE */
+
+:root {
+    --income-color: #7ba51f;
+    --expenses-color: #e84a5f;
+}
+
+
+/* HEADER */
+
+.info-header {
+    padding: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 20px 0;
+    margin: 0 0 20px;
+    background-image: url("raze.jpg");
+}
+
+#budget {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#budget::after {
+    content: '\0024';
+}
+
+.info-header .row {
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.info-header .row-income {
+    background-color: var(--income-color);
+}
+
+.info-header .row-expense {
+    background-color: var(--expenses-color);
+}
+
+#percent {
+    font-size: 13px;
+    background-color: #e5808c;
+    padding: 2px 7px;
+    border-radius: 6px;
+}
+
+#percent::after {
+    content: '\0025';
+}
+
+
+/* ADD CONTROL */
+
+.add input {
+    padding: 3px 10px;
+    margin: 0 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+#sign {
+    padding: 10px 1%;
+    font-size: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+#sign[value=minus] {
+    color: red;
+}
+
+#description {
+    width: 30%;
+}
+
+#value {
+    width: 15%;
+}
+
+#check:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.add input:focus,
+#sign:focus {
+    border: 2px solid var(--income-color);
+    outline: var(--income-color);
+}
+
+#minus {
+    color: var(--expenses-color);
+}
+
+#plus {
+    color: var(--income-color);
+}
+
+
+/* detail */
+
+.detail {
+    margin: 40px 0;
+}
+
+.detail .title {
+    text-align: left;
+    z-index: 1;
+}
+
+.list {
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0.6);
+    padding: 10px 20px;
+}
+
+.h3-income,
+.value-income {
+    color: var(--income-color);
+    font-weight: bold;
+}
+
+.value-income::before {
+    content: "\002B ";
+}
+
+.h3-expenses,
+.value-expenses {
+    color: var(--expenses-color);
+    font-weight: bold;
+}
+
+.value-expenses::before {
+    content: "\2212";
+}
+
+.row-detail {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.trash-can {
+    width: 24px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.trash-can:hover {
+    cursor: pointer;
+}

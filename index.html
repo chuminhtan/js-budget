@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget App</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center info-header">
+            <div class="col-4">
+                <h3>Available Budget</h3>
+                <p id="budget">+ 1,400.00</p>
+                <div class="row row-income justify-content-around">
+                    <span>INCOME</span>
+                    <span id="income">4,000.00</span>
+                    <span></span>
+                </div>
+                <div class="row row-expense justify-content-around">
+                    <span>EXPENSES</span>
+                    <span id="expenses">- 3,000.00</span>
+                    <em id="percent">0</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center add">
+            <select name="sign" id="sign">
+                <option value="minus" id="minus">-</option>
+                <option value="plus" id="plus">+</option>
+            </select>
+            <input type="text" id="description" placeholder="Add description">
+            <input type="number" id="value" placeholder="Value" min="1">
+            <img src="check.png" alt="check icon" id="check">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-around detail">
+            <div class="col-5 list">
+                <h3 class="h3-income">INCOME</h3>
+                <div id="list-income">
+                </div>
+            </div>
+            <div class="col-5 list">
+                <h3 class="h3-expenses">EXPENSES</h3>
+                <div id="list-expenses">
+                    <!-- <div class='row justify-content-around row-detail'>
+                        <p class='title'>Website project</p>
+                        <p class="cost-expense">-2,500.00</p>
+                    </div>
+                    <div class='row justify-content-around row-detail'>
+                        <p class='title'>Website project</p>
+                        <p class="cost-expense">-2,500.00</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
